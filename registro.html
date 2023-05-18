@@ -54,7 +54,7 @@
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
                     <div class="input-container">
-                        <input name="phoneNumber" id="phoneNumber" class="input" type="text" placeholder="Número telefónico">
+                        <input name="phoneNumber" id="phoneNumber" class="input" type="tel" placeholder="Número telefónico" pattern="^(?:(?:\+51\s?)|(?:0?[1-9][0-9]?\s?))?(?:9[0-9]{8})$" required data-tipo="phone" maxlength="12" minlength="9">
                         <label class="input-label" for="phoneNumber">Número telefónico</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
@@ -62,17 +62,17 @@
                 <fieldset>
                     <legend class="form__label">Dirección</legend>
                     <div class="input-container">
-                        <input name="cep" id="cep" class="input" type="text" placeholder="CEP">
+                        <input name="cep" id="cep" class="input" type="text" placeholder="CEP" data-tipo="direccion" pattern="^[a-zA-Z0-9\s.,'#-]{6,40}$" required>
                         <label class="input-label" for="cep">Dirección completa</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
                     <div class="input-container">
-                        <input name="city" id="city" class="input" type="text" placeholder="Ciudad">
+                        <input name="city" id="city" class="input" type="text" placeholder="Ciudad" data-tipo="ciudad" pattern="^[a-zA-Z0-9\s.,'#-]{4,30}$" required>
                         <label class="input-label" for="city">Ciudad</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
                     <div class="input-container">
-                        <input name="state" id="state" class="input" type="text" placeholder="Estado">
+                        <input name="state" id="state" class="input" type="text" placeholder="Estado" data-tipo="estado" pattern="^[a-zA-Z0-9\s.,'#-]{4,30}$" required>
                         <label class="input-label" for="state">Estado</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>

@@ -43,6 +43,22 @@ const mensajeDeError = {
 		valueMissing: 'El campo Nacimiento no puede estar vacio',
 		customError: 'Debes tener al menos 18 años de edad',
 	},
+	phone: {
+		valueMissing: 'El campo Telefono no puede estar vacio',
+		patternMismatch: 'El Formato requerido es 9xxxxxxxx , 9 digitos',
+	},
+	direccion: {
+		valueMissing: 'El campo Direccion no puede estar vacio',
+		patternMismatch: 'El Direccion debe contener entre 6 a 40 caracteres',
+	},
+	ciudad: {
+		valueMissing: 'El campo Ciudad no puede estar vacio',
+		patternMismatch: 'El Ciudad debe contener entre 4 a 30 caracteres',
+	},
+	estado: {
+		valueMissing: 'El campo Estado no puede estar vacio',
+		patternMismatch: 'El Estado debe contener entre 4 a 30 caracteres',
+	}
 }
 
 const validadores = {
@@ -51,7 +67,7 @@ const validadores = {
 
 function mostrarMensajeDeError(tipoDeInput , input){
 	let mensaje = '';
-	let encontrado = false;
+	let encontrado = false; //Bandera
 
 	tipoDeErrores.forEach( (error) => {
 		if(input.validity[error] && !encontrado){ //Verificar si ya se ha encontrado un mensaje de error. Si es así, puedes omitir la asignación del nuevo mensaje de error.
